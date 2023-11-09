@@ -1,0 +1,15 @@
+client:
+  github:
+    url: https://api.github.com
+spring:
+  datasource:
+    url: jdbc:h2:mem:users
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  liquibase:
+    url: jdbc:h2:mem:users
+    user: sa
+    password:

@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: "createTable_loginRequest"
+      author: karol.latos
+      changes:
+        - createTable:
+            tableName: LOGIN_REQUEST
+            columns:
+              - column:
+                  name: ID
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: LOGIN
+                  type: nvarchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: REQUEST_COUNT
+                  type: long
+                  constraints:
+                    nullable: false
