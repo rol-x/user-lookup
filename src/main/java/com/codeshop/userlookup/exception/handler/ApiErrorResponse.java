@@ -14,17 +14,17 @@ public class ApiErrorResponse {
 
   public ApiErrorResponse(ApiException exception) {
     this.timestamp = Instant.now();
-    this.status = exception.status.value();
-    this.error = exception.status.getReasonPhrase();
-    this.message = exception.message;
-    this.details = exception.inner.getMessage();
+    this.status = exception.getStatus().value();
+    this.error = exception.getStatus().getReasonPhrase();
+    this.message = exception.getMessage();
+    this.details = exception.getInner().getMessage();
   }
 
-  public ApiErrorResponse(HttpStatus status, RuntimeException exception) {
+  public ApiErrorResponse(HttpStatus status, String message, RuntimeException exception) {
     this.timestamp = Instant.now();
     this.status = status.value();
     this.error = status.getReasonPhrase();
-    this.message = "Something went wrong during a call to external service.";
+    this.message = message;
     this.details = exception.getMessage();
   }
 }
