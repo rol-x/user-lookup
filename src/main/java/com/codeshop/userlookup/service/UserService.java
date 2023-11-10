@@ -14,7 +14,6 @@ public class UserService {
   private final RequestsRepository requestsRepository;
 
   public User getUserData(String login) {
-    // TODO Save either all requests or only successful requests
     var user = githubUserProvider.getUserData(login);
     requestsRepository.save(
         requestsRepository.findByLogin(login).orElse(LoginRequest.build(login)).incrementCounter());

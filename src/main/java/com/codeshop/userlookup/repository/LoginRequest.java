@@ -13,7 +13,6 @@ import lombok.Getter;
 @Getter
 @Entity
 public class LoginRequest {
-  // TODO Separate column for ID or LOGIN as primary key?
   @Column(name = "ID")
   @Id
   @GeneratedValue(strategy = GenerationType.UUID)
