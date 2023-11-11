@@ -7,8 +7,8 @@ import static org.mockito.Mockito.when;
 
 import com.codeshop.userlookup.client.UserProvider;
 import com.codeshop.userlookup.model.User;
-import com.codeshop.userlookup.repository.LoginRequest;
 import com.codeshop.userlookup.repository.RequestsRepository;
+import com.codeshop.userlookup.repository.entity.LoginRequest;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -1,5 +1,6 @@
 package com.codeshop.userlookup.repository;
 
+import com.codeshop.userlookup.repository.entity.LoginRequest;
 import java.util.Optional;
 import java.util.UUID;
 import org.springframework.data.repository.CrudRepository;

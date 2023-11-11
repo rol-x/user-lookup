@@ -4,8 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.codeshop.userlookup.exception.UserLoginNotFoundException;
-import com.codeshop.userlookup.repository.LoginRequest;
 import com.codeshop.userlookup.repository.RequestsRepository;
+import com.codeshop.userlookup.repository.entity.LoginRequest;
 import com.codeshop.userlookup.service.UserService;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;

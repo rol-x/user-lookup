@@ -1,4 +1,4 @@
-package com.codeshop.userlookup.repository;
+package com.codeshop.userlookup.repository.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

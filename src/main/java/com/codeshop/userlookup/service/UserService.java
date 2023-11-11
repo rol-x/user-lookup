@@ -2,8 +2,8 @@ package com.codeshop.userlookup.service;
 
 import com.codeshop.userlookup.client.UserProvider;
 import com.codeshop.userlookup.model.User;
-import com.codeshop.userlookup.repository.LoginRequest;
 import com.codeshop.userlookup.repository.RequestsRepository;
+import com.codeshop.userlookup.repository.entity.LoginRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
