@@ -29,11 +29,12 @@ JDBC URL: jdbc:h2:file:~/users
 
 ## Features
 - User data retrieval from external service with option to add more providers
-- Saving each successful request in a database
+- Counting each successful request in a database
 - Liquibase for painless local setup
 - API Documentation in Swagger
 - Exception handling
 - Scalable architecture
+- Code formatted in compliance with [Google Java Style](https://google.github.io/styleguide/javaguide.html)
 - No: security, validation, containerization, and more...
 
 ## Tech Stack
@@ -44,6 +45,7 @@ JDBC URL: jdbc:h2:file:~/users
 - **OpenFeign**
 - **H2 Database**
 - **JUnit 5, AssertJ, Mockito**
+- **Spotless**
 - **Lombok**
 - **Maven**
 - **YAML**
