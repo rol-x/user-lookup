@@ -8,8 +8,9 @@ import org.springframework.http.HttpStatus;
 @Getter
 public class UserLoginNotFoundException extends ApiException {
   public static final String MESSAGE_TEMPLATE = "User identified by login %s does not exist.";
+  public static final HttpStatus HTTP_STATUS = HttpStatus.NOT_FOUND;
 
-  public UserLoginNotFoundException(FeignException inner, String login) {
-    super(inner, HttpStatus.NOT_FOUND, MESSAGE_TEMPLATE.formatted(login));
+  public UserLoginNotFoundException(FeignException cause, String login) {
+    super(HTTP_STATUS, MESSAGE_TEMPLATE.formatted(login), cause.getMessage());
   }
 }

@@ -23,7 +23,7 @@ public class GlobalExceptionHandler {
   @ExceptionHandler(FeignException.class)
   protected ResponseEntity<ApiErrorResponse> handleFeignException(
       FeignException exception, WebRequest request) {
-    return ResponseEntity.status(exception.status())
+    return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
         .body(
             new ApiErrorResponse(
                 HttpStatus.valueOf(exception.status()), FEIGN_EXCEPTION_MESSAGE, exception));

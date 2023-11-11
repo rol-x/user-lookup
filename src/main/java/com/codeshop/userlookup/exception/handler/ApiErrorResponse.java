@@ -17,7 +17,7 @@ public class ApiErrorResponse {
     this.status = exception.getStatus().value();
     this.error = exception.getStatus().getReasonPhrase();
     this.message = exception.getMessage();
-    this.details = exception.getInner().getMessage();
+    this.details = exception.getDetails();
   }
 
   public ApiErrorResponse(HttpStatus status, String message, RuntimeException exception) {
